@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset=utf-8 />
+<title>calculator</title>
+<style type="text/css">
+    body{
+      background-color: cadetblue;
+      
+    }
+      h1{
+        text-align: center;
+      }
+      form{
+        margin-top:250px ;
+        margin-left:400px;
+        background-color: rgba(210, 110, 198, 0.6);
+        width: 800px;
+        border-radius: 10px;
+        border-color: black;
+        
+      }
+      btn :hover{
+        margin-left: 550px;
+        background-color: blue;
+      }
+      p{
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+        color: brown;
+        
+      }
+      
+      label{
+        margin-left: 100px;
+      }
+
+      .btn1{
+        margin-left: 300px;
+
+      }
+</style> 
+<script> 
+
+    function multiply()
+{
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        if(num1==null || num2==""){
+            alert("Cell can't be blank!");
+        }else{
+            document.getElementById("result").innerHTML = num1* num2;
+        }
+        
+        
+}
+
+function divide() 
+{ 
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        if(num1==null || num2==""){
+            alert("Cell can't be blank!");
+        }else{
+            document.getElementById("result").innerHTML = num1/ num2;
+        }
+        
+        
+}
+function clearfunc(){
+        document.getElementById("name").value="";
+        document.getElementById("pwd").value="";
+    }
+</script>
+</head>
+<body>
+    
+    <form>
+    <h1>Simple calculator</h1><br><br>
+    <label> 1st number: </label>
+    <input type="text" id="firstNumber" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label> 2nd number: </label>
+    <input type="text" id="secondNumber" /><br><br>
+    <input type="button" onClick="multiply()" Value="Multiply" class="btn1" />
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="button" onClick="divide()" Value="Divide" class="btn2"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Reset" onclick="clearfunc()" class="btn3" />
+
+      
+    <p>The Result is :
+        <span id = "result"></span>
+        </p>
+    </form>
+    
+
+</body>
+</html>

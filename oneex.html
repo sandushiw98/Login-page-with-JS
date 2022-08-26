@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertor</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        label{
+            text-align: center;
+            margin-left: 200px;
+           
+        }
+        .btn:hover{
+            text-align: center;
+            margin-left: 740px; 
+            background-color: rgb(43, 183, 226);
+            margin-left: 400px;
+        }
+        form{
+            background-color: cadetblue;
+            margin-left: 300px;
+            border-radius: 10px;
+            line-height: 50px;
+            margin-top: 200px;
+            width: 800px;
+            
+        }
+        p{
+            text-align: center;
+            font-size: larger;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function convertor(){
+            var temcel = document.getElementById("cel").value;
+            var temfah = (temcel*9/5)+32;
+            alert("The tempreatour in Fahrenheit: " + temfah);
+        }  
+    </script>
+</head>
+<body>
+    <form>
+        <h1>Tempreture Convertor</h1>
+        <label>Enter the tempreture in Celsius</label>
+        <input type="text" id="cel" name="value" class="enter"><br><br>
+        <input type="submit" value="convert" onclick="convertor()" class="btn" />
+        
+
+    </form>
+    
+
+    
+</body>
+</html>
